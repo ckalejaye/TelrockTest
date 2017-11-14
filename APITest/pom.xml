@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.apitest</groupId>
+	<artifactId>APITest</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>API Test</name>
+	<description>API Testing Project</description>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>1.2.4</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-guice</artifactId>
+			<version>1.2.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>1.0.5</version>
+		</dependency>
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>2.12.2</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.smartbear.readyapi</groupId>
+			<artifactId>ready-api-testserver-client</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.smartbear.readyapi.testserver.cucumber</groupId>
+			<artifactId>testserver-cucumber-core</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-parser</artifactId>
+			<version>1.0.17</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>2.0.2-beta</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins> 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId> 
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.api.test.APITestApplication </mainClass>
+						</manifest>
+					</archive>
+				</configuration> 
+			</plugin>
+		</plugins> 
+	</build>
+
+</project>
